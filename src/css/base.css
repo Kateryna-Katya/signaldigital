@@ -1,3 +1,23 @@
 body{
   background: radial-gradient(50% 50% at 50% 50%, #7c6194 0%, #37243a 100%);
+  font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fdebbd;
+}
+h2{
+  font-family: "Baloo 2", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fe7b1b;
+    margin-bottom: 28px;
+}
+@media only screen and (min-width: 1440px) {
+  h2{
+    margin-bottom: 36px;
+  }
 }
