@@ -4,79 +4,133 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const createResponsiveSwiper = ({
-  selector,
-  nextBtn,
-  prevBtn,
-  desktopSlides = 4,
-}) => {
-  let swiper = null;
+// =========================
+// Characters Swiper
+// =========================
 
-  const initSwiper = () => {
-    const isMobile = window.innerWidth < 1440;
+let charactersSwiper = null;
 
-    // MOBILE
-    if (isMobile && !swiper) {
-      swiper = new Swiper(selector, {
-        modules: [Autoplay],
+const initCharactersSwiper = () => {
+  const isMobile = window.innerWidth < 1440;
 
-        slidesPerView: 1,
-        spaceBetween: 16,
-        loop: true,
-        speed: 800,
+  if (isMobile && !charactersSwiper) {
+    charactersSwiper = new Swiper('.characters-swiper', {
+      modules: [Autoplay],
 
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-      });
-    }
+      slidesPerView: 1,
+      spaceBetween: 16,
 
-    // DESKTOP
-    if (!isMobile) {
-      if (swiper) {
-        swiper.destroy(true, true);
-        swiper = null;
-      }
+      loop: true,
+      speed: 800,
 
-      // тільки для Reviews
-      if (desktopSlides > 1 && !swiper) {
-        swiper = new Swiper(selector, {
-          modules: [Navigation],
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  }
 
-          slidesPerView: desktopSlides,
-          spaceBetween: 24,
-
-          navigation: {
-            nextEl: nextBtn,
-            prevEl: prevBtn,
-          },
-        });
-      }
-    }
-  };
-
-  initSwiper();
-
-  window.addEventListener('resize', initSwiper);
+  if (!isMobile && charactersSwiper) {
+    charactersSwiper.destroy(true, true);
+    charactersSwiper = null;
+  }
 };
 
-// Characters
-createResponsiveSwiper({
-  selector: '.characters-swiper',
-  desktopSlides: 1, // дестрой після 1440
-});
+// =========================
+// Gallery Swiper
+// =========================
 
-// Gallery
-createResponsiveSwiper({
-  selector: '.gallery-swiper',
-  desktopSlides: 1, // дестрой після 1440
-});
+let gallerySwiper = null;
 
-// Reviews
-createResponsiveSwiper({
-  selector: '.reviews-swiper',
-  nextBtn: '.reviews-next',
-  prevBtn: '.reviews-prev',
-  desktopSlides: 4,
+const initGallerySwiper = () => {
+  const isMobile = window.innerWidth < 1440;
+
+  if (isMobile && !gallerySwiper) {
+    gallerySwiper = new Swiper('.gallery-swiper', {
+      modules: [Autoplay],
+
+      slidesPerView: 1.6,
+      spaceBetween: 16,
+
+      loop: true,
+      speed: 800,
+
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
+  if (!isMobile && gallerySwiper) {
+    gallerySwiper.destroy(true, true);
+    gallerySwiper = null;
+  }
+};
+
+// =========================
+// Reviews Swiper
+// =========================
+
+let reviewsSwiper = null;
+
+const initReviewsSwiper = () => {
+  const isMobile = window.innerWidth < 1440;
+
+  // MOBILE
+  if (isMobile) {
+    if (reviewsSwiper) {
+      reviewsSwiper.destroy(true, true);
+      reviewsSwiper = null;
+    }
+
+    reviewsSwiper = new Swiper('.reviews-swiper', {
+      modules: [Autoplay],
+
+      slidesPerView: 1,
+      spaceBetween: 16,
+
+      loop: true,
+      speed: 800,
+
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+  }
+
+  // DESKTOP
+  else {
+    if (reviewsSwiper) {
+      reviewsSwiper.destroy(true, true);
+      reviewsSwiper = null;
+    }
+
+    reviewsSwiper = new Swiper('.reviews-swiper', {
+      modules: [Navigation],
+
+      slidesPerView: 4,
+      spaceBetween: 24,
+
+      navigation: {
+        nextEl: '.reviews-next',
+        prevEl: '.reviews-prev',
+      },
+    });
+  }
+};
+
+// =========================
+// INIT
+// =========================
+
+initCharactersSwiper();
+initGallerySwiper();
+initReviewsSwiper();
+
+window.addEventListener('resize', () => {
+  initCharactersSwiper();
+  initGallerySwiper();
+  initReviewsSwiper();
 });

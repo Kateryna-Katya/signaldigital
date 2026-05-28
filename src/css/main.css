@@ -216,3 +216,15 @@ width: 413px;
     height: 370px;
 }
 }
+/* Gallery */
+@media only screen and (min-width: 1440px) {
+ .gallery-swiper .swiper-wrapper{
+    justify-content: center;
+    gap: 20px;
+ }
+ .gallery-swiper .swiper-slide{
+    border-radius: 20px;
+        width: 197px;
+        height: 350px;
+ }
+}
