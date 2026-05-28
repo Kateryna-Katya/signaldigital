@@ -185,3 +185,34 @@ padding:40px 34px;
     margin-left: 0;
 }    
 }
+/* Characters */
+.characters-swiper .swiper-slide{
+    border: 4px solid #fe7b1b;
+        border-radius: 54px;
+        padding: 18px;
+        width: 335px;
+        height: 337px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+.slide-characters-title{
+font-family: "Baloo 2", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    color: #fe7b1b;
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+@media only screen and (min-width: 1440px) {
+.characters-swiper .swiper-wrapper{
+    justify-content: center;
+    gap: 20px;
+}
+.characters-swiper .swiper-slide {
+width: 413px;
+    height: 370px;
+}
+}
