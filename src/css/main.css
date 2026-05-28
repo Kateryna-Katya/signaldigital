@@ -187,7 +187,10 @@ padding:40px 34px;
 }
 /* Characters */
 .characters-swiper .swiper-slide{
-    border: 4px solid #fe7b1b;
+background-image: url("/img/characters/box-mob.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: top center;
         border-radius: 54px;
         padding: 18px;
         width: 335px;
@@ -212,6 +215,7 @@ font-family: "Baloo 2", sans-serif;
     gap: 20px;
 }
 .characters-swiper .swiper-slide {
+    background-image: url("/img/characters/box.png");
 width: 413px;
     height: 370px;
 }
@@ -227,4 +231,49 @@ width: 413px;
         width: 197px;
         height: 350px;
  }
+}
+/* Reviews */
+.reviews-btn{
+    display: none;
+}
+.reviews-swiper .swiper-slide{
+    background-image: url("/img/reviews/card.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    border-radius: 54px;
+        padding: 25px 47px;
+        width: 305px;
+        height: 204px;
+display: flex;
+flex-direction: column;
+align-items: start;
+gap: 20px;
+}
+.author-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.author{
+font-family: "Baloo 2", sans-serif;
+    font-weight: 600;
+font-size: 20px;
+    line-height: 1.5;
+    color: #fe7b1b;
+}
+.reviews-text{
+    text-align: left;
+}
+@media only screen and (min-width: 1440px) {
+.reviews-btn{
+    display: flex;
+    margin-top: 22px;
+    justify-content: center;
+    gap: 20px;
+}
+.btn{
+    background-color: inherit;
+    border: none;
+}
 }

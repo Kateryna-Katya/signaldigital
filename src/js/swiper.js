@@ -87,7 +87,7 @@ const initReviewsSwiper = () => {
     reviewsSwiper = new Swiper('.reviews-swiper', {
       modules: [Autoplay],
 
-      slidesPerView: 1,
+      slidesPerView: 1.1,
       spaceBetween: 16,
 
       loop: true,
@@ -112,7 +112,7 @@ const initReviewsSwiper = () => {
 
       slidesPerView: 4,
       spaceBetween: 24,
-
+loop: true,
       navigation: {
         nextEl: '.reviews-next',
         prevEl: '.reviews-prev',
