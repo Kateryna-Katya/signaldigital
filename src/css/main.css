@@ -143,3 +143,45 @@ padding:40px 34px;
  z-index: 2;
 }  
 }
+/* Game Feel */
+.game-section{
+    background: radial-gradient(50% 50% at 50% 50%, #7c6194 0%, #37243a 100%);
+}
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 44px;
+}
+.game-img{
+    margin-top: 22px;
+}
+.game-text{
+    margin-top: 18px;
+}
+.game-link{
+    margin-top: 32px;
+}
+@media only screen and (min-width: 1440px) {
+.game-container{
+    align-items: start;
+    padding: 28px 188px;
+    position: relative;
+}
+.game-img{
+    position: absolute;
+    top: 5%;
+    right: 14%;
+    margin-top:0;
+}
+.game-text{
+    margin-top: 22px;
+    width: 542px;
+    text-align: left;
+}
+.game-link{
+    margin-top: 34px;
+    margin-left: 0;
+}    
+}
