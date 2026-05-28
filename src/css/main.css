@@ -395,3 +395,24 @@ width: 630px;
     gap: 20px;
 }
 }
+/* Contact */
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-link{
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    font-family: "Baloo 2", sans-serif;
+        font-weight: 600;
+font-size: 20px;
+    line-height: 1.5;
+    color: #fdebbd;
+}
+@media only screen and (min-width: 1440px) {
+ .contact-container{
+    padding-bottom: 150px;
+ }
+}
