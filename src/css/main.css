@@ -277,3 +277,121 @@ font-size: 20px;
     border: none;
 }
 }
+/* FAQ */
+.faq-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+.faq-acc {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    margin: 0 auto;
+    gap: 12px;
+
+}
+
+.faq-acc-el {
+    position: relative;
+    transition: margin-bottom 0.3s ease;
+    width: 335px;
+border-top: 1px solid #fe7b1b;
+}
+
+
+.faq-acc-el-title {
+    margin-bottom: 0;
+}
+
+.faq-acc-el-trigger {
+    border: none;
+    background: inherit;
+    width: 100%;
+font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fe7b1b;
+padding: 10px 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.faq-acc-arr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    transition: transform 0.3s ease;
+    border: none;
+    background-color: inherit;
+
+}
+
+.faq-acc-arr.is-hidden {
+    display: none;
+}
+
+.faq-acc-el.open .faq-acc-arr {
+    transform: rotate(180deg);
+}
+
+.faq-acc-el-descr-frame {
+    background: inherit;
+font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fdebbd;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, border-bottom 0.3s ease;
+}
+
+.faq-acc-el.js-enabled .faq-acc-el-descr-frame {
+    visibility: hidden;
+}
+
+
+.faq-acc-el.open .faq-acc-el-descr-frame {
+    visibility: visible;
+    opacity: 1;
+    border: none;
+    background: none;
+font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fdebbd;
+    text-align: left;
+    padding: 6px 20px;
+    max-height: 500px;
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .faq-acc {
+width: 630px;
+    }
+
+    .faq-acc-el {
+width: 630px;
+    }
+
+.faq-wrapper{
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+}
