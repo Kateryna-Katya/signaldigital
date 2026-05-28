@@ -1,0 +1,48 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.home-section {
+    background-image: url("/img/home/mob.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 800px;
+}
+.home-logo{
+    margin-top: 90px;
+}
+.home-link{
+    margin-top: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 243px;
+    height: 70px;
+}
+.home-container{
+    padding-bottom: 38px;
+}
+@media only screen and (min-width: 1440px) {
+.home-section {
+    background-image: url("/img/home/desk.png");
+    height: 823px;
+}
+.home-link{
+    margin-top: 48px;
+    margin-left: 193px;
+}
+.home-container{
+    padding-bottom: 200px;
+}    
+}
